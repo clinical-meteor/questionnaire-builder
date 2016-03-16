@@ -1,0 +1,34 @@
+
+<template name="homePage">
+  <div id="homePage" class="helveticas page">
+    <h2>Hello Healthcare!</h2>
+    <p>
+      Welcome to the default boilerplate for <a href="http://github.com/clinical-meteor/clinical-meteor" style={{getLinkStyle}}>Clinical Meteor</a> apps.  This boilerplate attempts to provide you with a basic framework for building FDA and HIPAA compliant applications using a modern Card UI.
+    </p>
+
+    <hr>
+    <h4>FDA Compliance</h4>
+    <p>
+      FDA compliance requires using two different types of quality assurance tests, in order to avoid and catch methodology errors and systemic biases with any particular one.  The terminology the FDA uses is Validation and Verification tests.  You can see the current state of this app with the badge below.  Click on it for more detailed information on the QA run.
+    </p>
+    <img src="https://circleci.com/gh/clinical-meteor/hello-healthcare/tree/master.svg?style=svg" alt="" />
+
+    <hr>
+    <h4>Card UI</h4>
+    <p>
+      Card UI is a natural design metaphor for document oriented databases and web browsers which use a Document Object Model (DOM).  We were very inspired by the <a href="http://cardstack.io/#manifesto" style={{getLinkStyle}}>Card Manifesto</a> and are generally designing the Clinical Meteor distro with Card UI principles.
+    </p>
+    <button id="navbarToggle">Navbars</button>
+    <button id="fullscreenToggle">Full Screen</button>
+
+
+    <hr>
+    <h4>HIPAA Auditing</h4>
+    <button id="counterButton">Click Me</button>
+    <br><br>
+    <p>You've pressed the button {{counter}} times.  Sign in to view the HIPAA Audit Log page, which records the name of whomever clicks the button.</p>
+
+
+
+  </div>
+</template>

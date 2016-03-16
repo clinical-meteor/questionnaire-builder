@@ -1,0 +1,62 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+
+# forward looking packages from Meteor 1.2 we want to migrate to
+# meteor-base             # Packages every Meteor app needs to have
+# mobile-experience       # Packages for a great mobile UX
+# blaze-html-templates    # Compile .html files into Meteor Blaze views
+# standard-minifiers      # JS/CSS minifiers run for production mode
+# ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+# existing packages we're currently using in Meteor 1.1.0.3
+meteor-platform
+templating
+
+# existing packages available in 1.1.0.3 which we can leave as-is
+mongo                   # The database Meteor supports right now
+session                 # Client-side reactive dictionary for your app
+jquery                  # Helpful client-side library
+tracker                 # Meteor's client-side reactive programming library
+
+
+# (in)security packages we should remove at some point
+autopublish             # Publish all data to the clients (for prototyping)
+insecure                # Allow all DB writes from clients (for prototyping)
+
+
+# clinical framework packages
+
+#clinical:env
+clinical:fonts
+clinical:extended-api
+clinical:active-entry
+
+clinical:theming
+clinical:theming-ui
+clinical:default-theme
+clinical:router
+clinical:router-default-config
+clinical:active-layout
+clinical:active-layout-reset
+clinical:active-layout-pagescreen-config
+
+clinical:sidebar
+clinical:homepage
+clinical:glass-ui
+
+# for HIPAA compliance
+accounts-base
+accounts-password
+clinical:accounts-housemd  #this is only a testing package
+clinical:hipaa-logger
+clinical:hipaa-audit-log
+
+# for FDA verification testing
+anti:gagarin@=0.4.11
+
+# other packages used by clinical framework which need to be cleaned up
+grove:less

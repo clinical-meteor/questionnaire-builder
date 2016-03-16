@@ -1,0 +1,31 @@
+<template name="sidebar">
+  <section id="sidebar" class="sidebarMenu">
+
+    <div id="sidebarMenuContents" class="sidebarMenuContents">
+
+
+        {{#if currentUser}}
+          <div id="usernameLink" class="sidebarMenuItem">{{getUsername}}</div>
+          <a id="logoutButton" class="withLowerBorder">Logout</a>
+          <a href="/audit" class="withLowerBorder">HIPAA Audit Log</a>
+        {{else}}
+          <div id="usernameLink" class="sidebarMenuItem withLowerBorder">{{getUsername}}</div>
+        {{/if}}
+
+        <a href="/">Home</a>
+        <a href="/theming">Theming</a>
+        <a href="/blank" class="withLowerBorder">Blank Page</a>
+        <a href="http://github.com/clinical-meteor/hello-healthcare" >Get the Source Code</a>
+        <a href="http://clinical.meteor.com">Clinical Meteor</a>
+        <a href="http://www.meteor.com">Meteor</a>
+        {{#if currentUser}}
+        {{/if}}
+
+        <div id="connectionStatusPanel" class="centered">
+          {{getConnectionStatus}}
+        </div>
+
+
+    </div>
+  </section>
+</template>
