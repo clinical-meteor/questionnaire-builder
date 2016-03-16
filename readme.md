@@ -1,14 +1,14 @@
-## hello-healthcare
+## questionnaire-builder
 
-Hello World for the Clinical Meteor release track.
+Questionnaire Builder for ClinicalMeteor, using HL7 FHIR Questionnaire and QuestionnaireReponse resources.
 
-[![Circle CI](https://circleci.com/gh/clinical-meteor/hello-healthcare/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/hello-healthcare/tree/master)
+
 
 ================================
 #### Installation
 
 ````js
-git clone http://github.com/clinical-meteor/hello-healthcare
+git clone http://github.com/clinical-meteor/questionnaire-builder
 ````
 
 
