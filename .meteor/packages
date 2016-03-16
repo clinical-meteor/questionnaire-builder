@@ -60,3 +60,5 @@ anti:gagarin@=0.4.11
 
 # other packages used by clinical framework which need to be cleaned up
 grove:less
+clinical:hl7-resource-questionnaire
+clinical:hl7-resource-questionnaire-response

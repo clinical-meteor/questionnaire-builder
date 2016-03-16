@@ -1,0 +1,21 @@
+.responseItem {
+  // .font-s2;
+  border-bottom: 1px solid lightgray;
+  padding-top: 15px;
+
+  // Layout of taskItem children
+  display: flex;
+  flex-wrap: wrap;
+  // .display(flex);
+  // .flex-wrap(wrap);
+  height: 3rem;
+  width: 100%;
+
+  .authored{
+    padding-left: 40px;
+  }
+
+  // Border between list items
+  & + .taskItem { border-top: 1px solid #f0f9fb; }
+
+}

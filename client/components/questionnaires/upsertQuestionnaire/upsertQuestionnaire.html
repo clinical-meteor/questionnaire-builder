@@ -1,0 +1,31 @@
+<template name="upsertQuestionnaire">
+  <div id="upsertQuestionnaire" class="page" style="{{getPagePadding}} {{getPageBorder}}">
+    <div class="padded">
+      <form id="patientSatisfactionForm">
+        {{#with currentQuestionnaire}}
+          <div class="answerSet tile" style="{{getOpacityWithCorner}} {{getBackground}}">
+            <h1>{{ group.title }}</h1 >
+            <h2>{{ group.text }}</h2>
+          </div>
+
+          {{#each group.group }}
+            <h3> {{ title }}</h3>
+            <h4> {{ text }}</h4>
+
+            {{#each question }}
+              <div id="answerSet-{{linkId}}" class="answerSet tile" style="{{getOpacity}} {{getBackground}}">
+                <h4><span class="bold">{{linkId}}.</span>  {{ text }}</h4>
+                {{#each options}}
+                  <div class="radioElement">
+                    <input type="radio" id="question-{{ getLinkId .. }}" name="question-{{ getLinkId .. }}" value="{{this}}">
+                    <label class="radioLabel" for="question-{{ getLinkId .. }}"><span><span></span></span>{{this}}</label>
+                  </div>
+                {{/each}}
+              </div>
+            {{/each}}
+          {{/each}}
+        {{/with}}
+      </form>
+    </div>
+  </div>
+</template>

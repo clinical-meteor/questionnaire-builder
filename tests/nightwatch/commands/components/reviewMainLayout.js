@@ -1,10 +1,13 @@
 exports.command = function(username, password) {
   this
-    .verify.elementPresent("#appBody")
+      .verify.elementPresent("body").pause(1000)
+
       .verify.elementPresent("#navbarHeader")
-        .verify.elementPresent("#contentContainer")
-        .verify.elementPresent("#contentContainer .content-scrollable")
+
+      .verify.elementPresent("#mainPanel")
+      .verify.elementPresent("#secondPanel")
+
       .verify.elementPresent("#navbarFooter")
 
-  return this; // allows the command to be chained.
+  return this;
 };

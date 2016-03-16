@@ -1,0 +1,31 @@
+
+<template name="patientSatisfactionResponse">
+  <div id="patientSatisfactionResponse" class="page" style="{{getPagePadding}} {{getPageBorder}}">
+    <div class="padded">
+      <form id="patientSatisfactionForm">
+        <h3> RESPONSE SUMMARY </h3><br>
+        <div class="answerSet tile" style="{{getOpacity}} {{getBackground}}">
+          {{getCompletedPercentage}}% Completed
+        </div>
+
+
+          {{#each group.group }}
+            <h3> {{ title }}</h3>
+            <h4> {{ text }}</h4>
+
+            {{#each question }}
+              <h4><span class="bold">{{linkId}}.</span>  {{ text }}</h4>
+              <div class="answerSet tile" style="{{getOpacity}} {{getBackground}}">
+                {{#each options}}
+                  <div class="radioElement">
+                    <input type="radio" id="question-{{ getLinkId .. }}" name="question-{{ getLinkId .. }}" value="{{this}}" {{getChecked ..}} disabled>
+                    <label class="radioLabel" for="question-{{ getLinkId .. }}">{{this}}</label>
+                  </div>
+                {{/each}}
+              </div>
+            {{/each}}
+          {{/each}}
+      </form>
+    </div>
+  </div>
+</template>

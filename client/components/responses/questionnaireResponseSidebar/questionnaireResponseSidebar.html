@@ -1,0 +1,20 @@
+<template name="questionnaireResponseSidebar">
+  <section id="questionnaireResponseSidebar" class="sidebarMenu" style={{getWestPanelStyle}}>
+
+
+    <div id="sidebarMenuContents" class="sidebarMenuContents">
+      <a id="usernameLink" class="sidebarMenuItem withLowerBorder">{{getUsername}}</a>
+      {{#each response}}
+        <a class="response"><span class="name">{{getAuthored}} {{ group.title }}</span></a>
+      {{/each}}
+      {{#if currentUser}}
+        <a id="logoutButton" class="withLowerBorder">Logout</a>
+      {{/if}}
+
+      <!-- <div id="connectionStatusPanel" class="centered">
+        {{getConnectionStatus}}
+      </div> -->
+
+    </div>
+  </section>
+</template>

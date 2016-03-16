@@ -1,0 +1,35 @@
+exports.command = function() {
+  this
+    .verify.elementPresent("table")
+    .verify.elementPresent("table thead")
+    .verify.elementPresent("table thead tr")
+
+    .verify.elementPresent("table thead tr .Patient_ID")
+    .verify.elementPresent("table thead tr .Sample_ID")
+    .verify.elementPresent("table thead tr .Segment")
+    .verify.elementPresent("table thead tr .Visit_Date")
+    .verify.elementPresent("table thead tr .PSA__complexed__direct_measurement_")
+    .verify.elementPresent("table thead tr .TESTOSTERONE__TOTAL")
+    .verify.elementPresent("table thead tr .Alkaline_Phosphatase")
+    .verify.elementPresent("table thead tr .LDH_")
+    .verify.elementPresent("table thead tr .ANC")
+    .verify.elementPresent("table thead tr .HEMATOCRIT")
+    .verify.elementPresent("table thead tr .Hemoglobin")
+    .verify.elementPresent("table thead tr .Platelets")
+    .verify.elementPresent("table thead tr .RBC")
+    .verify.elementPresent("table thead tr .WBC")
+    .verify.elementPresent("table thead tr .WBC_Basophils")
+    .verify.elementPresent("table thead tr .WBC_Eosinophils")
+    .verify.elementPresent("table thead tr .WBC_Lymphocytes")
+    .verify.elementPresent("table thead tr .WBC_Monocytes")
+    .verify.elementPresent("table thead tr .WBC_Neutrophils")
+    .verify.elementPresent("table thead tr .Partial_Thromboplastin_Time____PTT_")
+    .verify.elementPresent("table thead tr .Prothrombin_Time__PT_")
+    .verify.elementPresent("table thead tr .Arm")
+    .verify.elementPresent("table thead tr .International_Normalized_Ratio__INR_")
+    .verify.elementPresent("table thead tr .Lab_Time")
+    .verify.elementPresent("table thead tr .Day")
+    .verify.elementPresent("table thead tr .Phase")
+
+  return this;
+};

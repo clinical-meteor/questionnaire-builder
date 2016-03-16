@@ -1,0 +1,41 @@
+
+<template name="questionnairesTablePage">
+  <article id="questionnairesTablePage" style="{{getPageHeight}}">
+    {{> recordHeader url="questionnaires" spreadsheet=false  imageGrid=false}}
+    <div class="horizontally-padded page" style={{getOpacity}}>
+      <input id="questionnaireSearchInput" type="text" class="glass fullwidth form-control" placeholder="search..." value="{{getRecordSearchFilter}}" />
+
+      <table id="questionnairesTable" class="table table-striped tablesorter">
+        <thead>
+          <tr class="questionnaireHeaderRow">
+            <th>
+              <i class="fa fa-signal"></i>
+            </th>
+            <th class="created">Created At</th>
+            <th>Name</th>
+            <th>
+              <i class="fa fa-times"></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each questionnairesList}}
+            <tr class="questionnaireRow {{isGrayedOut}}">
+              <td class="checkbox">
+                <i class="fa {{checkedIcon}}"></i>
+              </td>
+              <!-- <td class="barcode">{{_id}}</td> -->
+              <td class="created">{{ getCreatedAt }}</td>
+              <td>{{ group.title }}</td>
+              <td class="delete">
+                <i class="fa fa-times"></i>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+    </div>
+    {{> recordFooter }}
+  </article>
+</template>

@@ -1,16 +1,12 @@
 // async version calls method on the server
-exports.command = function (methodName, timeout) {
-  console.log("callMeteorMethod.js", methodName);
+exports.command = function () {
   var client = this;
-  if (!timeout) {
-    timeout = 5000;
-  }
 
   this
-    .timeoutsAsyncScript(timeout)
+    .timeoutsAsyncScript(5000)
     .executeAsync(function (data, meteorCallback) {
       //return HipaaLogger.logEventObject(data);
-      Meteor.call(methodName, data, function (meteorError, meteorResult) {
+      Meteor.call("dropQuestionnaires", data, function (meteorError, meteorResult) {
         var response = (meteorError ? {
           error: meteorError
         } : {
@@ -18,7 +14,7 @@ exports.command = function (methodName, timeout) {
         });
         meteorCallback(response);
       });
-    }, [methodName], function (result) {
+    }, [], function (result) {
       //console.log("result.value", result.value);
       //client.assert.ok(result.value);
     }).pause(1000);

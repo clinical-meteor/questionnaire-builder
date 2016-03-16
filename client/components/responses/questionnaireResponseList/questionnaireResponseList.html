@@ -1,0 +1,12 @@
+
+
+<template name="questionnaireResponseList">
+  <div id="questionnaireResponseList" class="page" style="{{getOpacity}} {{getPagePadding}} {{getPageBorder}} {{getPageHeight}}">
+    <div class="padded" style="{{getBackground}}">
+      {{#each response}}
+        {{> responseItem}}
+        <!-- {{_id}}{{resourceType}}<br> -->
+      {{/each}}
+    </div>
+  </div>
+</template>
