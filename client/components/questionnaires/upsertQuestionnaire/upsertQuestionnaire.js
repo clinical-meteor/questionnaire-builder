@@ -12,7 +12,7 @@ Router.route( '/view/questionnaire/:id', {
     return Questionnaires.findOne({_id: this.params.id});
   },
   yieldTemplates: {
-    'zedocHeader': {
+    'navbarHeader': {
       to: 'header'
     },
     'questionnaireActionButtons': {
