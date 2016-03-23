@@ -8,7 +8,7 @@ Router.route('/response/:id', {
     return QuestionnaireResponses.findOne(this.params.id);
   },
   yieldTemplates: {
-    'zedocHeader': {
+    'navbarHeader': {
       to: 'header'
     },
     'reactiveOverlaysTemplate': {
